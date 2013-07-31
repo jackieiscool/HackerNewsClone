@@ -1,0 +1,6 @@
+
+<% @links.each do |link| %>
+	<table>
+		<tr><%= link_to(link.title, link.url) %></tr>
+	</table>
+<% end %>
