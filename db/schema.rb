@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731161349) do
+ActiveRecord::Schema.define(:version => 20131105052707) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20130731161349) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.string   "type",            :default => "basic"
   end
 
   create_table "votes", :force => true do |t|
