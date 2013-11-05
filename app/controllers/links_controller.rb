@@ -10,8 +10,9 @@ class LinksController < ApplicationController
 
 	def create
 		@link = Link.new(params[:link])
+		@link.user = current_user
 		if @link.save
-			render :show
+			redirect_to links_path
 		else
 			flash[:error] = @link.errors.messages
 			render :new
